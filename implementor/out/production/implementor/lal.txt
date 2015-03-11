@@ -1,1 +1,1 @@
-java -classpath .;ImplementorTest.jar;junit-4.11.jar;hamcrest-core-1.3.jar;quickcheck-0.6.jar info.kgeorgiy.java.advanced.implementor.Tester class ru.ifmo.ctddev.kachalskiy.implementor.Implementor
+C:\jdk\jdk1.8.0_31\bin\java.exe -classpath .;ImplementorTest.jar;junit-4.11.jar;hamcrest-core-1.3.jar;quickcheck-0.6.jar;tools.jar info.kgeorgiy.java.advanced.implementor.Tester interface ru.ifmo.ctddev.kachalskiy.implementor.Implementor
