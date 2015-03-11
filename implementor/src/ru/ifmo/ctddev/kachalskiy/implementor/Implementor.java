@@ -11,11 +11,6 @@ import java.lang.reflect.Modifier;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by Ilya on 11.03.2015.
- */
-
-
 public class Implementor implements Impler {
 
     private StringBuilder sb;
