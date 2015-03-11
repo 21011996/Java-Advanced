@@ -12,8 +12,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Илья on 11.03.2015.
+ * Created by Ilya on 11.03.2015.
  */
+
 
 public class Implementor implements Impler {
 
