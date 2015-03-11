@@ -1,1 +1,1 @@
-javadoc -private -linkoffline http://docs.oracle.com/javase/7/docs/api/ http://docs.oracle.com/javase/7/docs/api/ -sourcepath src/ -d javadocs ru.ifmo.ctddev.kachalskiy.implementor info.kgeorgiy.java.advanced.implementor
+C:\jdk\jdk1.8.0_31\bin\javadoc.exe -private -linkoffline http://docs.oracle.com/javase/7/docs/api/ http://docs.oracle.com/javase/7/docs/api/ -sourcepath src/ -d javadocs ru.ifmo.ctddev.kachalskiy.implementor info.kgeorgiy.java.advanced.implementor > logfile.txt
