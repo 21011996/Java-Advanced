@@ -2,16 +2,47 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7de5d05a-be1a-4107-9d5e-eb19c2e4a965" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/bin.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/tools.xml" />
-      <change type="DELETED" beforePath="C:\Andreid\Java-Advanced\implementor\out\production\implementor\info\kgeorgiy\java\advanced\implementor\Impler.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Andreid\Java-Advanced\implementor\out\production\implementor\info\kgeorgiy\java\advanced\implementor\ImplerException.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/implementor/ru/ifmo/ctddev/kachalskiy/implementor/Implementor.class" afterPath="$PROJECT_DIR$/out/production/implementor/ru/ifmo/ctddev/kachalskiy/implementor/Implementor.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/implementor/ImplementorTest.jar" afterPath="$PROJECT_DIR$/out/production/implementor/ImplementorTest.jar" />
+      <change type="DELETED" beforePath="C:\Andreid\Java-Advanced\implementor\javadoc\allclasses-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Andreid\Java-Advanced\implementor\javadoc\allclasses-noframe.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Andreid\Java-Advanced\implementor\javadoc\constant-values.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Andreid\Java-Advanced\implementor\javadoc\deprecated-list.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Andreid\Java-Advanced\implementor\javadoc\help-doc.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Andreid\Java-Advanced\implementor\javadoc\index-files\index-1.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Andreid\Java-Advanced\implementor\javadoc\index-files\index-2.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Andreid\Java-Advanced\implementor\javadoc\index-files\index-3.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Andreid\Java-Advanced\implementor\javadoc\index-files\index-4.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Andreid\Java-Advanced\implementor\javadoc\index-files\index-5.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Andreid\Java-Advanced\implementor\javadoc\index-files\index-6.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Andreid\Java-Advanced\implementor\javadoc\index-files\index-7.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Andreid\Java-Advanced\implementor\javadoc\index-files\index-8.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Andreid\Java-Advanced\implementor\javadoc\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Andreid\Java-Advanced\implementor\javadoc\info\kgeorgiy\java\advanced\implementor\Impler.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Andreid\Java-Advanced\implementor\javadoc\info\kgeorgiy\java\advanced\implementor\ImplerException.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Andreid\Java-Advanced\implementor\javadoc\info\kgeorgiy\java\advanced\implementor\class-use\Impler.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Andreid\Java-Advanced\implementor\javadoc\info\kgeorgiy\java\advanced\implementor\class-use\ImplerException.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Andreid\Java-Advanced\implementor\javadoc\info\kgeorgiy\java\advanced\implementor\package-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Andreid\Java-Advanced\implementor\javadoc\info\kgeorgiy\java\advanced\implementor\package-summary.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Andreid\Java-Advanced\implementor\javadoc\info\kgeorgiy\java\advanced\implementor\package-tree.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Andreid\Java-Advanced\implementor\javadoc\info\kgeorgiy\java\advanced\implementor\package-use.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Andreid\Java-Advanced\implementor\javadoc\overview-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Andreid\Java-Advanced\implementor\javadoc\overview-summary.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Andreid\Java-Advanced\implementor\javadoc\overview-tree.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Andreid\Java-Advanced\implementor\javadoc\package-list" afterPath="" />
+      <change type="DELETED" beforePath="C:\Andreid\Java-Advanced\implementor\javadoc\resources\background.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\Andreid\Java-Advanced\implementor\javadoc\resources\tab.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\Andreid\Java-Advanced\implementor\javadoc\resources\titlebar.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\Andreid\Java-Advanced\implementor\javadoc\resources\titlebar_end.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\Andreid\Java-Advanced\implementor\javadoc\ru\ifmo\ctddev\kachalskiy\implementor\Implementor.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Andreid\Java-Advanced\implementor\javadoc\ru\ifmo\ctddev\kachalskiy\implementor\Main.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Andreid\Java-Advanced\implementor\javadoc\ru\ifmo\ctddev\kachalskiy\implementor\class-use\Implementor.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Andreid\Java-Advanced\implementor\javadoc\ru\ifmo\ctddev\kachalskiy\implementor\class-use\Main.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Andreid\Java-Advanced\implementor\javadoc\ru\ifmo\ctddev\kachalskiy\implementor\package-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Andreid\Java-Advanced\implementor\javadoc\ru\ifmo\ctddev\kachalskiy\implementor\package-summary.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Andreid\Java-Advanced\implementor\javadoc\ru\ifmo\ctddev\kachalskiy\implementor\package-tree.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Andreid\Java-Advanced\implementor\javadoc\ru\ifmo\ctddev\kachalskiy\implementor\package-use.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Andreid\Java-Advanced\implementor\javadoc\serialized-form.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Andreid\Java-Advanced\implementor\javadoc\stylesheet.css" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ru/ifmo/ctddev/kachalskiy/implementor/Implementor.java" afterPath="$PROJECT_DIR$/src/ru/ifmo/ctddev/kachalskiy/implementor/Implementor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/implementor.iml" afterPath="$PROJECT_DIR$/implementor.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/implementor/lal.txt" afterPath="$PROJECT_DIR$/out/production/implementor/lal.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="implementor.iws" />
@@ -41,8 +72,8 @@
       <file leaf-file-name="Implementor.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ru/ifmo/ctddev/kachalskiy/implementor/Implementor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3529412" vertical-offset="1972" max-vertical-offset="2907">
-              <caret line="128" column="0" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.4913495" vertical-offset="1093" max-vertical-offset="4284">
+              <caret line="81" column="5" selection-start-line="81" selection-start-column="5" selection-end-line="81" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -54,7 +85,7 @@
         <entry file="file://$PROJECT_DIR$/src/info/kgeorgiy/java/advanced/implementor/Impler.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
-              <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
+              <caret line="19" column="100" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="100" />
               <folding />
             </state>
           </provider>
@@ -115,6 +146,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -197,8 +230,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -220,6 +251,7 @@
     <property name="last_opened_file_path" value="C:/Program Files/Java/jdk1.8.0_31/bin" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="dynamic.classpath" value="false" />
+    <property name="FullScreen" value="false" />
   </component>
   <component name="RunManager" selected="Application.Unnamed">
     <configuration default="false" name="Main" type="Application" factoryName="Application" temporary="true">
@@ -339,6 +371,12 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <pass-parent-envs>true</pass-parent-envs>
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
@@ -481,43 +519,44 @@
       <created>1426087367751</created>
       <option name="number" value="Default" />
       <updated>1426087367751</updated>
-      <workItem from="1426087371828" duration="8112000" />
+      <workItem from="1426087371828" duration="8701000" />
+      <workItem from="1426105891487" duration="4901000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8112000" />
+    <option name="totallyTimeSpent" value="13602000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="960" y="0" width="960" height="1040" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3351235" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3351235" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -548,6 +587,32 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/ru/ifmo/ctddev/kachalskiy/implementor/Implementor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2907">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/info/kgeorgiy/java/advanced/implementor/Impler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="374" max-vertical-offset="510">
+          <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/info/kgeorgiy/java/advanced/implementor/ImplerException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="391">
+          <caret line="7" column="39" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/info/kgeorgiy/java/advanced/implementor/ImplerException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
@@ -559,15 +624,15 @@
     <entry file="file://$PROJECT_DIR$/src/info/kgeorgiy/java/advanced/implementor/Impler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
-          <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
+          <caret line="19" column="100" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="100" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/ifmo/ctddev/kachalskiy/implementor/Implementor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3529412" vertical-offset="1972" max-vertical-offset="2907">
-          <caret line="128" column="0" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.4913495" vertical-offset="1093" max-vertical-offset="4284">
+          <caret line="81" column="5" selection-start-line="81" selection-start-column="5" selection-end-line="81" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

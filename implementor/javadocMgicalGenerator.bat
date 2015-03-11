@@ -1,0 +1,1 @@
+javadoc -private -linkoffline http://docs.oracle.com/javase/7/docs/api/ http://docs.oracle.com/javase/7/docs/api/ -sourcepath src/ -d javadocs ru.ifmo.ctddev.kachalskiy.implementor info.kgeorgiy.java.advanced.implementor
