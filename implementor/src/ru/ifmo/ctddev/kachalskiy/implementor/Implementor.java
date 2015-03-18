@@ -1,15 +1,19 @@
 package ru.ifmo.ctddev.kachalskiy.implementor;
 
-import info.kgeorgiy.java.advanced.implementor.Impler;
 import info.kgeorgiy.java.advanced.implementor.ImplerException;
+import info.kgeorgiy.java.advanced.implementor.JarImpler;
 
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+import javax.tools.JavaCompiler;
+import javax.tools.ToolProvider;
+import java.io.*;
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.jar.Attributes;
+import java.util.jar.JarOutputStream;
+import java.util.jar.Manifest;
+import java.util.zip.ZipEntry;
 
 /**
  * @author Ilya Kachaslkiy
@@ -17,7 +21,7 @@ import java.util.List;
  * This class implements interface, prob. will create jar file.
  */
 
-public class Implementor implements Impler {
+public class Implementor implements JarImpler {
 
     /**
      * StringBuilder used as container for implementation.
@@ -27,7 +31,18 @@ public class Implementor implements Impler {
      * List contains all methods from file given.
      */
     private List<Method> allMethods;
-
+    /**
+     * String which contains absolute path to <tt>.java</tt> file with implementation of class.
+     */
+    private static String globalPath;
+    /**
+     * String which contains canonical name our interface.
+     */
+    private static String classFullName;
+    /**
+     * Directory which contains all temporary files.
+     */
+    private static File tmpDir;
     /**
      * Empty constructor.
      */
@@ -45,9 +60,15 @@ public class Implementor implements Impler {
     public static void main(String args[]) throws ImplerException {
         try {
             Implementor implementor = new Implementor();
-            implementor.implement(Class.forName(args[0]), new File(args[1]));
+            if ("-jar".equals(args[0])) {
+                implementor.implementJar(Class.forName(args[1]), new File(args[2]));
+            }
+            else {
+                implementor.implement(Class.forName(args[0]), new File(args[1]));
+            }
+            implementor.deleteDirectory(tmpDir);
         } catch (Exception e) {
-        	System.err.println(e.toString());
+            System.err.println(e.toString());
         }
     }
 
@@ -61,16 +82,18 @@ public class Implementor implements Impler {
      * @see java.lang.String
      */
     public void implement(Class<?> token, File root) throws ImplerException {
-        if (token.isPrimitive()) {
+        int modifiers = token.getModifiers();
+        if ((token.isPrimitive())) {
             throw new ImplerException();
         }
         try {
             String path = root.getCanonicalPath() + "/" + token.getPackage().getName().replaceAll("\\.", "/");
             File file = new File(path);
             file.mkdirs();
-            try (FileWriter fileWriter = new FileWriter(path + "/" + token.getSimpleName() + "Impl.java")) {
+            tmpDir = new File(root.getCanonicalPath() + "/" + token.getPackage().getName().substring(0, token.getPackage().getName().replaceAll("\\.", "/").indexOf("/")));
+            globalPath = path + "/" + token.getSimpleName() + "Impl.java";
+            try (FileWriter fileWriter = new FileWriter(globalPath)) {
                 printClass(token);
-
                 fileWriter.append(sb.toString());
                 sb.delete(0, sb.length());
                 allMethods.clear();
@@ -78,6 +101,84 @@ public class Implementor implements Impler {
         } catch (IOException e) {
             e.printStackTrace();
             System.out.println("Input/Output error");
+        }
+    }
+
+    /**
+     * Deletes directory with subdirs and files.
+     *
+     * @param directory Directory to delete
+     * @see java.io.File
+     */
+    private void deleteDirectory(File directory) {
+        if (directory.isDirectory()) {
+            File[] files = directory.listFiles();
+            if (files != null) {
+                for (File child : files) {
+                    deleteDirectory(child);
+                }
+            }
+        }
+        directory.delete();
+    }
+
+    /**
+     * Create <tt>.jar</tt> file with implementation for <tt>token</tt>.
+     *
+     * @param token type token to create implementation for.
+     * @param root path, where <tt>.jar</tt> file will be created.
+     * @throws ImplerException when impossible to create <tt>.jar</tt> file.
+     * @see java.io.File
+     * @see java.lang.Class
+     */
+    @Override
+    public void implementJar(Class<?> token, File root) throws ImplerException {
+        try {
+            classFullName = token.getCanonicalName();
+            String path = root.getCanonicalPath().substring(0,
+                    root.getCanonicalPath().lastIndexOf('/') + 1);
+            Implementor implementor = new Implementor();
+            implementor.implement(token, new File(path));
+            buildJar(root);
+
+        } catch (IOException e) {
+            System.err.println(e.toString());
+        }
+    }
+
+    /**
+     * Compile <tt>.java</tt> file with implementation. Write manifest and <tt>.class</tt> file into <tt>.jar</tt>.
+     *
+     * @param root path, where <tt>.jar</tt> file will be created.
+     * @see java.io.File
+     * @see javax.tools.JavaCompiler
+     * @see java.util.jar.Manifest
+     */
+    @SuppressWarnings("resource")
+    private void buildJar(File root) {
+        File file = new File(globalPath);
+        JavaCompiler compiler = ToolProvider.getSystemJavaCompiler();
+        compiler.run(null, null, null, file.getPath());
+
+        try {
+            Manifest manifest = new Manifest();
+            manifest.getMainAttributes().put(Attributes.Name.MANIFEST_VERSION,
+                    "1.0");
+            try (FileOutputStream fout = new FileOutputStream(root);
+                 JarOutputStream jarOut = new JarOutputStream(fout, manifest)) {
+                jarOut.putNextEntry(new ZipEntry(classFullName.replaceAll(
+                        "\\.", "/") + "Impl.class"));
+                FileInputStream in = new FileInputStream(globalPath.substring(
+                        0, globalPath.lastIndexOf(".")) + ".class");
+                BufferedInputStream bis = new BufferedInputStream(in);
+                byte[] buf = new byte[1000];
+                int count;
+                while ((count = bis.read(buf)) != -1) {
+                    jarOut.write(buf, 0, count);
+                }
+            }
+        } catch (Exception e) {
+            System.err.println(e.toString());
         }
     }
 
@@ -123,7 +224,7 @@ public class Implementor implements Impler {
         }
         sb.append("\n" + "    " + "@Override");
         modifiers ^= Modifier.ABSTRACT;
-        
+
         if (Modifier.isTransient(modifiers)) {
             modifiers ^= Modifier.TRANSIENT;
         }
@@ -216,7 +317,7 @@ public class Implementor implements Impler {
                     break;
                 }
             }
-            if (flag == false) {
+            if (!flag) {
                 allMethods.add(method);
             }
         }
