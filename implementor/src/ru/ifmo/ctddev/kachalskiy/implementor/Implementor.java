@@ -249,7 +249,7 @@ public class Implementor implements JarImpler {
             return "null";
         } else {
             if ("char".equals(returnValue.getSimpleName())) {
-                return "'a'";
+                return "'0'";
             }
             if ("boolean".equals(returnValue.getSimpleName())) {
                 return "true";

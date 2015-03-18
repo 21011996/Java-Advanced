@@ -21,12 +21,6 @@ public class DynAnyImpl implements org.omg.DynamicAny.DynAny {
     public boolean equal(org.omg.DynamicAny.DynAny args0) { return true; }
 
     @Override
-    public boolean seek(int args0) { return true; }
-
-    @Override
-    public void assign(org.omg.DynamicAny.DynAny args0) { return ; }
-
-    @Override
     public int component_count() { return 0; }
 
     @Override
@@ -42,7 +36,7 @@ public class DynAnyImpl implements org.omg.DynamicAny.DynAny {
     public boolean get_boolean() { return true; }
 
     @Override
-    public char get_char() { return 'a'; }
+    public char get_char() { return '0'; }
 
     @Override
     public double get_double() { return 0; }
@@ -87,7 +81,7 @@ public class DynAnyImpl implements org.omg.DynamicAny.DynAny {
     public java.io.Serializable get_val() { return null; }
 
     @Override
-    public char get_wchar() { return 'a'; }
+    public char get_wchar() { return '0'; }
 
     @Override
     public java.lang.String get_wstring() { return null; }
@@ -151,6 +145,12 @@ public class DynAnyImpl implements org.omg.DynamicAny.DynAny {
 
     @Override
     public org.omg.CORBA.Any to_any() { return null; }
+
+    @Override
+    public boolean seek(int args0) { return true; }
+
+    @Override
+    public void assign(org.omg.DynamicAny.DynAny args0) { return ; }
 
     @Override
     public org.omg.CORBA.Request _create_request(org.omg.CORBA.Context args0, java.lang.String args1, org.omg.CORBA.NVList args2, org.omg.CORBA.NamedValue args3, org.omg.CORBA.ExceptionList args4, org.omg.CORBA.ContextList args5) { return null; }

@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Application-Name: MyApp
+Sealed: true
+Main-Class: ru.ifmo.ctddev.kachalskiy.implementor.Implementor
+Codebase: www.mysite.com
