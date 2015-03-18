@@ -1,1 +1,0 @@
-java -jar Implementor.jar ru.ifmo.ctddev.kachalskiy.implementor.Implementor Pony

@@ -1,1 +1,0 @@
-C:\jdk\jdk1.8.0_31\bin\jar.exe cfm Implementor.jar META-INF/MANIFEST.MF info/kgeorgiy/java/advanced/implementor/*.class ru/ifmo/ctddev/kachalskiy/implementor/*.class
