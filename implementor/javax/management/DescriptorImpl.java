@@ -18,9 +18,6 @@ public class DescriptorImpl implements javax.management.Descriptor {
     public boolean isValid() { return true; }
 
     @Override
-    public void setFields(java.lang.String[] args0, java.lang.Object[] args1) { return ; }
-
-    @Override
     public java.lang.String[] getFieldNames() { return null; }
 
     @Override
@@ -34,5 +31,8 @@ public class DescriptorImpl implements javax.management.Descriptor {
 
     @Override
     public void setField(java.lang.String args0, java.lang.Object args1) { return ; }
+
+    @Override
+    public void setFields(java.lang.String[] args0, java.lang.Object[] args1) { return ; }
 
 }

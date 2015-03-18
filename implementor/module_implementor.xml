@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_implementor" default="compile.module.implementor">
+  <dirname property="module.implementor.basedir" file="${ant.file.module_implementor}"/>
+  
+  <property name="module.jdk.home.implementor" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.implementor" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.implementor" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.implementor" value="-encoding UTF-8 -source 8 ${compiler.args}"/>
+  
+  <property name="implementor.output.dir" value="${module.implementor.basedir}/out/production/implementor"/>
+  <property name="implementor.testoutput.dir" value="${module.implementor.basedir}/out/test/implementor"/>
+  
+  <path id="implementor.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="implementor.module.production.classpath">
+    <path refid="${module.jdk.classpath.implementor}"/>
+    <path refid="library.implementortest.classpath"/>
+    <path refid="library.hamcrest-core-1.3.classpath"/>
+    <path refid="library.junit-4.11.classpath"/>
+    <path refid="library.quickcheck-0.6.classpath"/>
+  </path>
+  
+  <path id="implementor.runtime.production.module.classpath">
+    <pathelement location="${implementor.output.dir}"/>
+    <path refid="library.implementortest.classpath"/>
+    <path refid="library.hamcrest-core-1.3.classpath"/>
+    <path refid="library.junit-4.11.classpath"/>
+    <path refid="library.quickcheck-0.6.classpath"/>
+  </path>
+  
+  <path id="implementor.module.classpath">
+    <path refid="${module.jdk.classpath.implementor}"/>
+    <pathelement location="${implementor.output.dir}"/>
+    <path refid="library.implementortest.classpath"/>
+    <path refid="library.hamcrest-core-1.3.classpath"/>
+    <path refid="library.junit-4.11.classpath"/>
+    <path refid="library.quickcheck-0.6.classpath"/>
+  </path>
+  
+  <path id="implementor.runtime.module.classpath">
+    <pathelement location="${implementor.testoutput.dir}"/>
+    <pathelement location="${implementor.output.dir}"/>
+    <path refid="library.implementortest.classpath"/>
+    <path refid="library.hamcrest-core-1.3.classpath"/>
+    <path refid="library.junit-4.11.classpath"/>
+    <path refid="library.quickcheck-0.6.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.implementor">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.implementor">
+    <patternset refid="excluded.from.module.implementor"/>
+  </patternset>
+  
+  <path id="implementor.module.sourcepath">
+    <dirset dir="${module.implementor.basedir}">
+      <include name="src"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.implementor" depends="compile.module.implementor.production,compile.module.implementor.tests" description="Compile module implementor"/>
+  
+  <target name="compile.module.implementor.production" depends="register.custom.compilers" description="Compile module implementor; production classes">
+    <mkdir dir="${implementor.output.dir}"/>
+    <javac2 destdir="${implementor.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.implementor}/javac">
+      <compilerarg line="${compiler.args.implementor}"/>
+      <bootclasspath refid="implementor.module.bootclasspath"/>
+      <classpath refid="implementor.module.production.classpath"/>
+      <src refid="implementor.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.implementor"/>
+    </javac2>
+    
+    <copy todir="${implementor.output.dir}">
+      <fileset dir="${module.implementor.basedir}/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.implementor.tests" depends="register.custom.compilers,compile.module.implementor.production" description="compile module implementor; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.implementor" description="cleanup module">
+    <delete dir="${implementor.output.dir}"/>
+    <delete dir="${implementor.testoutput.dir}"/>
+  </target>
+</project>
