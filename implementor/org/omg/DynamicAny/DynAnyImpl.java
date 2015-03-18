@@ -18,13 +18,13 @@ public class DynAnyImpl implements org.omg.DynamicAny.DynAny {
     public void rewind() { return ; }
 
     @Override
-    public boolean equal(org.omg.DynamicAny.DynAny args0) { return true; }
+    public void assign(org.omg.DynamicAny.DynAny args0) { return ; }
 
     @Override
     public boolean seek(int args0) { return true; }
 
     @Override
-    public void assign(org.omg.DynamicAny.DynAny args0) { return ; }
+    public boolean equal(org.omg.DynamicAny.DynAny args0) { return true; }
 
     @Override
     public int component_count() { return 0; }
