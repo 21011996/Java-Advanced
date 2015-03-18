@@ -3,31 +3,19 @@ package javax.sql.rowset;
 public class CachedRowSetImpl implements javax.sql.rowset.CachedRowSet {
 
     @Override
-    public int size() { return 0; }
-
-    @Override
-    public void execute(java.sql.Connection args0) { return ; }
-
-    @Override
-    public void release() { return ; }
+    public void acceptChanges(java.sql.Connection args0) { return ; }
 
     @Override
     public void acceptChanges() { return ; }
 
     @Override
-    public void acceptChanges(java.sql.Connection args0) { return ; }
+    public boolean columnUpdated(java.lang.String args0) { return true; }
 
     @Override
     public boolean columnUpdated(int args0) { return true; }
 
     @Override
-    public boolean columnUpdated(java.lang.String args0) { return true; }
-
-    @Override
     public void commit() { return ; }
-
-    @Override
-    public javax.sql.rowset.CachedRowSet createCopy() { return null; }
 
     @Override
     public javax.sql.rowset.CachedRowSet createCopyNoConstraints() { return null; }
@@ -66,10 +54,10 @@ public class CachedRowSetImpl implements javax.sql.rowset.CachedRowSet {
     public boolean nextPage() { return true; }
 
     @Override
-    public void populate(java.sql.ResultSet args0, int args1) { return ; }
+    public void populate(java.sql.ResultSet args0) { return ; }
 
     @Override
-    public void populate(java.sql.ResultSet args0) { return ; }
+    public void populate(java.sql.ResultSet args0, int args1) { return ; }
 
     @Override
     public boolean previousPage() { return true; }
@@ -102,10 +90,10 @@ public class CachedRowSetImpl implements javax.sql.rowset.CachedRowSet {
     public void setTableName(java.lang.String args0) { return ; }
 
     @Override
-    public java.util.Collection toCollection() { return null; }
+    public java.util.Collection toCollection(java.lang.String args0) { return null; }
 
     @Override
-    public java.util.Collection toCollection(java.lang.String args0) { return null; }
+    public java.util.Collection toCollection() { return null; }
 
     @Override
     public java.util.Collection toCollection(int args0) { return null; }
@@ -120,103 +108,22 @@ public class CachedRowSetImpl implements javax.sql.rowset.CachedRowSet {
     public void undoUpdate() { return ; }
 
     @Override
-    public void rollback(java.sql.Savepoint args0) { return ; }
+    public int size() { return 0; }
+
+    @Override
+    public void execute(java.sql.Connection args0) { return ; }
+
+    @Override
+    public void release() { return ; }
+
+    @Override
+    public javax.sql.rowset.CachedRowSet createCopy() { return null; }
 
     @Override
     public void rollback() { return ; }
 
     @Override
-    public void setURL(int args0, java.net.URL args1) { return ; }
-
-    @Override
-    public void execute() { return ; }
-
-    @Override
-    public void setReadOnly(boolean args0) { return ; }
-
-    @Override
-    public void setBoolean(java.lang.String args0, boolean args1) { return ; }
-
-    @Override
-    public void setBoolean(int args0, boolean args1) { return ; }
-
-    @Override
-    public void setByte(java.lang.String args0, byte args1) { return ; }
-
-    @Override
-    public void setByte(int args0, byte args1) { return ; }
-
-    @Override
-    public void setDouble(int args0, double args1) { return ; }
-
-    @Override
-    public void setDouble(java.lang.String args0, double args1) { return ; }
-
-    @Override
-    public void setFloat(java.lang.String args0, float args1) { return ; }
-
-    @Override
-    public void setFloat(int args0, float args1) { return ; }
-
-    @Override
-    public void setInt(int args0, int args1) { return ; }
-
-    @Override
-    public void setInt(java.lang.String args0, int args1) { return ; }
-
-    @Override
-    public void setLong(java.lang.String args0, long args1) { return ; }
-
-    @Override
-    public void setLong(int args0, long args1) { return ; }
-
-    @Override
-    public void setShort(java.lang.String args0, short args1) { return ; }
-
-    @Override
-    public void setShort(int args0, short args1) { return ; }
-
-    @Override
-    public boolean isReadOnly() { return true; }
-
-    @Override
-    public void setTimestamp(int args0, java.sql.Timestamp args1) { return ; }
-
-    @Override
-    public void setTimestamp(java.lang.String args0, java.sql.Timestamp args1) { return ; }
-
-    @Override
-    public void setTimestamp(int args0, java.sql.Timestamp args1, java.util.Calendar args2) { return ; }
-
-    @Override
-    public void setTimestamp(java.lang.String args0, java.sql.Timestamp args1, java.util.Calendar args2) { return ; }
-
-    @Override
-    public void setTime(int args0, java.sql.Time args1) { return ; }
-
-    @Override
-    public void setTime(java.lang.String args0, java.sql.Time args1) { return ; }
-
-    @Override
-    public void setTime(java.lang.String args0, java.sql.Time args1, java.util.Calendar args2) { return ; }
-
-    @Override
-    public void setTime(int args0, java.sql.Time args1, java.util.Calendar args2) { return ; }
-
-    @Override
-    public void setDate(int args0, java.sql.Date args1, java.util.Calendar args2) { return ; }
-
-    @Override
-    public void setDate(java.lang.String args0, java.sql.Date args1) { return ; }
-
-    @Override
-    public void setDate(java.lang.String args0, java.sql.Date args1, java.util.Calendar args2) { return ; }
-
-    @Override
-    public void setDate(int args0, java.sql.Date args1) { return ; }
-
-    @Override
-    public java.lang.String getPassword() { return null; }
+    public void rollback(java.sql.Savepoint args0) { return ; }
 
     @Override
     public void addRowSetListener(javax.sql.RowSetListener args0) { return ; }
@@ -258,19 +165,16 @@ public class CachedRowSetImpl implements javax.sql.rowset.CachedRowSet {
     public void removeRowSetListener(javax.sql.RowSetListener args0) { return ; }
 
     @Override
-    public void setArray(int args0, java.sql.Array args1) { return ; }
-
-    @Override
     public void setAsciiStream(int args0, java.io.InputStream args1, int args2) { return ; }
-
-    @Override
-    public void setAsciiStream(java.lang.String args0, java.io.InputStream args1) { return ; }
 
     @Override
     public void setAsciiStream(java.lang.String args0, java.io.InputStream args1, int args2) { return ; }
 
     @Override
     public void setAsciiStream(int args0, java.io.InputStream args1) { return ; }
+
+    @Override
+    public void setAsciiStream(java.lang.String args0, java.io.InputStream args1) { return ; }
 
     @Override
     public void setBigDecimal(int args0, java.math.BigDecimal args1) { return ; }
@@ -282,25 +186,25 @@ public class CachedRowSetImpl implements javax.sql.rowset.CachedRowSet {
     public void setBinaryStream(java.lang.String args0, java.io.InputStream args1) { return ; }
 
     @Override
-    public void setBinaryStream(int args0, java.io.InputStream args1) { return ; }
+    public void setBinaryStream(int args0, java.io.InputStream args1, int args2) { return ; }
 
     @Override
-    public void setBinaryStream(int args0, java.io.InputStream args1, int args2) { return ; }
+    public void setBinaryStream(int args0, java.io.InputStream args1) { return ; }
 
     @Override
     public void setBinaryStream(java.lang.String args0, java.io.InputStream args1, int args2) { return ; }
 
     @Override
-    public void setBlob(java.lang.String args0, java.sql.Blob args1) { return ; }
-
-    @Override
-    public void setBlob(int args0, java.io.InputStream args1) { return ; }
-
-    @Override
     public void setBlob(java.lang.String args0, java.io.InputStream args1) { return ; }
 
     @Override
+    public void setBlob(java.lang.String args0, java.sql.Blob args1) { return ; }
+
+    @Override
     public void setBlob(java.lang.String args0, java.io.InputStream args1, long args2) { return ; }
+
+    @Override
+    public void setBlob(int args0, java.io.InputStream args1) { return ; }
 
     @Override
     public void setBlob(int args0, java.io.InputStream args1, long args2) { return ; }
@@ -309,31 +213,16 @@ public class CachedRowSetImpl implements javax.sql.rowset.CachedRowSet {
     public void setBlob(int args0, java.sql.Blob args1) { return ; }
 
     @Override
-    public void setBytes(java.lang.String args0, byte[] args1) { return ; }
-
-    @Override
     public void setBytes(int args0, byte[] args1) { return ; }
 
     @Override
-    public void setCharacterStream(java.lang.String args0, java.io.Reader args1) { return ; }
-
-    @Override
-    public void setCharacterStream(java.lang.String args0, java.io.Reader args1, int args2) { return ; }
-
-    @Override
-    public void setCharacterStream(int args0, java.io.Reader args1, int args2) { return ; }
-
-    @Override
-    public void setCharacterStream(int args0, java.io.Reader args1) { return ; }
-
-    @Override
-    public void setClob(int args0, java.io.Reader args1, long args2) { return ; }
+    public void setBytes(java.lang.String args0, byte[] args1) { return ; }
 
     @Override
     public void setClob(int args0, java.io.Reader args1) { return ; }
 
     @Override
-    public void setClob(java.lang.String args0, java.io.Reader args1, long args2) { return ; }
+    public void setClob(int args0, java.io.Reader args1, long args2) { return ; }
 
     @Override
     public void setClob(int args0, java.sql.Clob args1) { return ; }
@@ -345,7 +234,7 @@ public class CachedRowSetImpl implements javax.sql.rowset.CachedRowSet {
     public void setClob(java.lang.String args0, java.sql.Clob args1) { return ; }
 
     @Override
-    public void setCommand(java.lang.String args0) { return ; }
+    public void setClob(java.lang.String args0, java.io.Reader args1, long args2) { return ; }
 
     @Override
     public void setConcurrency(int args0) { return ; }
@@ -363,25 +252,19 @@ public class CachedRowSetImpl implements javax.sql.rowset.CachedRowSet {
     public void setMaxRows(int args0) { return ; }
 
     @Override
-    public void setNCharacterStream(java.lang.String args0, java.io.Reader args1) { return ; }
-
-    @Override
-    public void setNCharacterStream(int args0, java.io.Reader args1, long args2) { return ; }
+    public void setNCharacterStream(java.lang.String args0, java.io.Reader args1, long args2) { return ; }
 
     @Override
     public void setNCharacterStream(int args0, java.io.Reader args1) { return ; }
 
     @Override
-    public void setNCharacterStream(java.lang.String args0, java.io.Reader args1, long args2) { return ; }
+    public void setNCharacterStream(int args0, java.io.Reader args1, long args2) { return ; }
+
+    @Override
+    public void setNCharacterStream(java.lang.String args0, java.io.Reader args1) { return ; }
 
     @Override
     public void setNClob(java.lang.String args0, java.sql.NClob args1) { return ; }
-
-    @Override
-    public void setNClob(int args0, java.io.Reader args1) { return ; }
-
-    @Override
-    public void setNClob(int args0, java.sql.NClob args1) { return ; }
 
     @Override
     public void setNClob(int args0, java.io.Reader args1, long args2) { return ; }
@@ -393,16 +276,16 @@ public class CachedRowSetImpl implements javax.sql.rowset.CachedRowSet {
     public void setNClob(java.lang.String args0, java.io.Reader args1, long args2) { return ; }
 
     @Override
-    public void setNString(int args0, java.lang.String args1) { return ; }
+    public void setNClob(int args0, java.io.Reader args1) { return ; }
+
+    @Override
+    public void setNClob(int args0, java.sql.NClob args1) { return ; }
 
     @Override
     public void setNString(java.lang.String args0, java.lang.String args1) { return ; }
 
     @Override
-    public void setNull(int args0, int args1, java.lang.String args2) { return ; }
-
-    @Override
-    public void setNull(java.lang.String args0, int args1, java.lang.String args2) { return ; }
+    public void setNString(int args0, java.lang.String args1) { return ; }
 
     @Override
     public void setNull(int args0, int args1) { return ; }
@@ -411,22 +294,10 @@ public class CachedRowSetImpl implements javax.sql.rowset.CachedRowSet {
     public void setNull(java.lang.String args0, int args1) { return ; }
 
     @Override
-    public void setObject(int args0, java.lang.Object args1, int args2) { return ; }
+    public void setNull(int args0, int args1, java.lang.String args2) { return ; }
 
     @Override
-    public void setObject(java.lang.String args0, java.lang.Object args1, int args2) { return ; }
-
-    @Override
-    public void setObject(int args0, java.lang.Object args1, int args2, int args3) { return ; }
-
-    @Override
-    public void setObject(java.lang.String args0, java.lang.Object args1, int args2, int args3) { return ; }
-
-    @Override
-    public void setObject(int args0, java.lang.Object args1) { return ; }
-
-    @Override
-    public void setObject(java.lang.String args0, java.lang.Object args1) { return ; }
+    public void setNull(java.lang.String args0, int args1, java.lang.String args2) { return ; }
 
     @Override
     public void setPassword(java.lang.String args0) { return ; }
@@ -450,12 +321,6 @@ public class CachedRowSetImpl implements javax.sql.rowset.CachedRowSet {
     public void setSQLXML(java.lang.String args0, java.sql.SQLXML args1) { return ; }
 
     @Override
-    public void setString(java.lang.String args0, java.lang.String args1) { return ; }
-
-    @Override
-    public void setString(int args0, java.lang.String args1) { return ; }
-
-    @Override
     public void setTransactionIsolation(int args0) { return ; }
 
     @Override
@@ -468,160 +333,142 @@ public class CachedRowSetImpl implements javax.sql.rowset.CachedRowSet {
     public void setUsername(java.lang.String args0) { return ; }
 
     @Override
+    public void execute() { return ; }
+
+    @Override
+    public void setReadOnly(boolean args0) { return ; }
+
+    @Override
+    public void setBoolean(int args0, boolean args1) { return ; }
+
+    @Override
+    public void setBoolean(java.lang.String args0, boolean args1) { return ; }
+
+    @Override
+    public void setByte(int args0, byte args1) { return ; }
+
+    @Override
+    public void setByte(java.lang.String args0, byte args1) { return ; }
+
+    @Override
+    public void setDouble(java.lang.String args0, double args1) { return ; }
+
+    @Override
+    public void setDouble(int args0, double args1) { return ; }
+
+    @Override
+    public void setFloat(int args0, float args1) { return ; }
+
+    @Override
+    public void setFloat(java.lang.String args0, float args1) { return ; }
+
+    @Override
+    public void setInt(int args0, int args1) { return ; }
+
+    @Override
+    public void setInt(java.lang.String args0, int args1) { return ; }
+
+    @Override
+    public void setLong(java.lang.String args0, long args1) { return ; }
+
+    @Override
+    public void setLong(int args0, long args1) { return ; }
+
+    @Override
+    public void setShort(int args0, short args1) { return ; }
+
+    @Override
+    public void setShort(java.lang.String args0, short args1) { return ; }
+
+    @Override
+    public boolean isReadOnly() { return true; }
+
+    @Override
     public void setType(int args0) { return ; }
 
     @Override
-    public java.lang.String getString(int args0) { return null; }
+    public void setTimestamp(java.lang.String args0, java.sql.Timestamp args1, java.util.Calendar args2) { return ; }
 
     @Override
-    public java.lang.String getString(java.lang.String args0) { return null; }
+    public void setTimestamp(int args0, java.sql.Timestamp args1, java.util.Calendar args2) { return ; }
 
     @Override
-    public void updateBytes(java.lang.String args0, byte[] args1) { return ; }
+    public void setTimestamp(java.lang.String args0, java.sql.Timestamp args1) { return ; }
 
     @Override
-    public void updateBytes(int args0, byte[] args1) { return ; }
+    public void setTimestamp(int args0, java.sql.Timestamp args1) { return ; }
 
     @Override
-    public java.lang.Object getObject(int args0, java.util.Map args1) { return null; }
+    public void setObject(int args0, java.lang.Object args1, int args2) { return ; }
 
     @Override
-    public java.lang.Object getObject(java.lang.String args0, java.util.Map args1) { return null; }
+    public void setObject(java.lang.String args0, java.lang.Object args1, int args2) { return ; }
 
     @Override
-    public java.lang.Object getObject(java.lang.String args0) { return null; }
+    public void setObject(java.lang.String args0, java.lang.Object args1) { return ; }
 
     @Override
-    public java.lang.Object getObject(int args0) { return null; }
+    public void setObject(int args0, java.lang.Object args1) { return ; }
 
     @Override
-    public java.lang.Object getObject(java.lang.String args0, java.lang.Class args1) { return null; }
+    public void setObject(int args0, java.lang.Object args1, int args2, int args3) { return ; }
 
     @Override
-    public java.lang.Object getObject(int args0, java.lang.Class args1) { return null; }
+    public void setObject(java.lang.String args0, java.lang.Object args1, int args2, int args3) { return ; }
 
     @Override
-    public boolean getBoolean(int args0) { return true; }
+    public java.lang.String getPassword() { return null; }
 
     @Override
-    public boolean getBoolean(java.lang.String args0) { return true; }
+    public void setURL(int args0, java.net.URL args1) { return ; }
 
     @Override
-    public byte getByte(int args0) { return 0; }
+    public void setTime(java.lang.String args0, java.sql.Time args1, java.util.Calendar args2) { return ; }
 
     @Override
-    public byte getByte(java.lang.String args0) { return 0; }
+    public void setTime(int args0, java.sql.Time args1) { return ; }
 
     @Override
-    public short getShort(int args0) { return 0; }
+    public void setTime(int args0, java.sql.Time args1, java.util.Calendar args2) { return ; }
 
     @Override
-    public short getShort(java.lang.String args0) { return 0; }
+    public void setTime(java.lang.String args0, java.sql.Time args1) { return ; }
 
     @Override
-    public int getInt(java.lang.String args0) { return 0; }
+    public void setDate(int args0, java.sql.Date args1, java.util.Calendar args2) { return ; }
 
     @Override
-    public int getInt(int args0) { return 0; }
+    public void setDate(int args0, java.sql.Date args1) { return ; }
 
     @Override
-    public long getLong(java.lang.String args0) { return 0; }
+    public void setDate(java.lang.String args0, java.sql.Date args1) { return ; }
 
     @Override
-    public long getLong(int args0) { return 0; }
+    public void setDate(java.lang.String args0, java.sql.Date args1, java.util.Calendar args2) { return ; }
 
     @Override
-    public float getFloat(int args0) { return 0; }
+    public void setArray(int args0, java.sql.Array args1) { return ; }
 
     @Override
-    public float getFloat(java.lang.String args0) { return 0; }
+    public void setString(java.lang.String args0, java.lang.String args1) { return ; }
 
     @Override
-    public double getDouble(java.lang.String args0) { return 0; }
+    public void setString(int args0, java.lang.String args1) { return ; }
 
     @Override
-    public double getDouble(int args0) { return 0; }
+    public void setCharacterStream(java.lang.String args0, java.io.Reader args1) { return ; }
 
     @Override
-    public byte[] getBytes(java.lang.String args0) { return null; }
+    public void setCharacterStream(java.lang.String args0, java.io.Reader args1, int args2) { return ; }
 
     @Override
-    public byte[] getBytes(int args0) { return null; }
+    public void setCharacterStream(int args0, java.io.Reader args1) { return ; }
 
     @Override
-    public boolean next() { return true; }
+    public void setCharacterStream(int args0, java.io.Reader args1, int args2) { return ; }
 
     @Override
-    public java.sql.Array getArray(java.lang.String args0) { return null; }
-
-    @Override
-    public java.sql.Array getArray(int args0) { return null; }
-
-    @Override
-    public java.net.URL getURL(int args0) { return null; }
-
-    @Override
-    public java.net.URL getURL(java.lang.String args0) { return null; }
-
-    @Override
-    public boolean first() { return true; }
-
-    @Override
-    public void close() { return ; }
-
-    @Override
-    public int getType() { return 0; }
-
-    @Override
-    public boolean previous() { return true; }
-
-    @Override
-    public java.sql.Ref getRef(int args0) { return null; }
-
-    @Override
-    public java.sql.Ref getRef(java.lang.String args0) { return null; }
-
-    @Override
-    public boolean last() { return true; }
-
-    @Override
-    public java.sql.Timestamp getTimestamp(java.lang.String args0, java.util.Calendar args1) { return null; }
-
-    @Override
-    public java.sql.Timestamp getTimestamp(int args0, java.util.Calendar args1) { return null; }
-
-    @Override
-    public java.sql.Timestamp getTimestamp(int args0) { return null; }
-
-    @Override
-    public java.sql.Timestamp getTimestamp(java.lang.String args0) { return null; }
-
-    @Override
-    public java.sql.Time getTime(int args0, java.util.Calendar args1) { return null; }
-
-    @Override
-    public java.sql.Time getTime(int args0) { return null; }
-
-    @Override
-    public java.sql.Time getTime(java.lang.String args0) { return null; }
-
-    @Override
-    public java.sql.Time getTime(java.lang.String args0, java.util.Calendar args1) { return null; }
-
-    @Override
-    public java.sql.Date getDate(java.lang.String args0, java.util.Calendar args1) { return null; }
-
-    @Override
-    public java.sql.Date getDate(java.lang.String args0) { return null; }
-
-    @Override
-    public java.sql.Date getDate(int args0, java.util.Calendar args1) { return null; }
-
-    @Override
-    public java.sql.Date getDate(int args0) { return null; }
-
-    @Override
-    public boolean isClosed() { return true; }
+    public void setCommand(java.lang.String args0) { return ; }
 
     @Override
     public boolean absolute(int args0) { return true; }
@@ -642,49 +489,28 @@ public class CachedRowSetImpl implements javax.sql.rowset.CachedRowSet {
     public void deleteRow() { return ; }
 
     @Override
-    public int findColumn(java.lang.String args0) { return 0; }
-
-    @Override
     public java.io.InputStream getAsciiStream(java.lang.String args0) { return null; }
 
     @Override
     public java.io.InputStream getAsciiStream(int args0) { return null; }
 
     @Override
-    public java.math.BigDecimal getBigDecimal(java.lang.String args0, int args1) { return null; }
-
-    @Override
-    public java.math.BigDecimal getBigDecimal(int args0) { return null; }
-
-    @Override
-    public java.math.BigDecimal getBigDecimal(int args0, int args1) { return null; }
-
-    @Override
-    public java.math.BigDecimal getBigDecimal(java.lang.String args0) { return null; }
+    public java.io.InputStream getBinaryStream(int args0) { return null; }
 
     @Override
     public java.io.InputStream getBinaryStream(java.lang.String args0) { return null; }
 
     @Override
-    public java.io.InputStream getBinaryStream(int args0) { return null; }
+    public java.sql.Blob getBlob(java.lang.String args0) { return null; }
 
     @Override
     public java.sql.Blob getBlob(int args0) { return null; }
 
     @Override
-    public java.sql.Blob getBlob(java.lang.String args0) { return null; }
-
-    @Override
-    public java.io.Reader getCharacterStream(int args0) { return null; }
-
-    @Override
-    public java.io.Reader getCharacterStream(java.lang.String args0) { return null; }
+    public java.sql.Clob getClob(java.lang.String args0) { return null; }
 
     @Override
     public java.sql.Clob getClob(int args0) { return null; }
-
-    @Override
-    public java.sql.Clob getClob(java.lang.String args0) { return null; }
 
     @Override
     public int getConcurrency() { return 0; }
@@ -705,31 +531,28 @@ public class CachedRowSetImpl implements javax.sql.rowset.CachedRowSet {
     public java.sql.ResultSetMetaData getMetaData() { return null; }
 
     @Override
-    public java.io.Reader getNCharacterStream(java.lang.String args0) { return null; }
-
-    @Override
     public java.io.Reader getNCharacterStream(int args0) { return null; }
 
     @Override
-    public java.sql.NClob getNClob(java.lang.String args0) { return null; }
+    public java.io.Reader getNCharacterStream(java.lang.String args0) { return null; }
 
     @Override
     public java.sql.NClob getNClob(int args0) { return null; }
 
     @Override
-    public java.lang.String getNString(java.lang.String args0) { return null; }
+    public java.sql.NClob getNClob(java.lang.String args0) { return null; }
 
     @Override
     public java.lang.String getNString(int args0) { return null; }
 
     @Override
-    public int getRow() { return 0; }
-
-    @Override
-    public java.sql.RowId getRowId(java.lang.String args0) { return null; }
+    public java.lang.String getNString(java.lang.String args0) { return null; }
 
     @Override
     public java.sql.RowId getRowId(int args0) { return null; }
+
+    @Override
+    public java.sql.RowId getRowId(java.lang.String args0) { return null; }
 
     @Override
     public java.sql.SQLXML getSQLXML(int args0) { return null; }
@@ -745,15 +568,6 @@ public class CachedRowSetImpl implements javax.sql.rowset.CachedRowSet {
 
     @Override
     public java.sql.SQLWarning getWarnings() { return null; }
-
-    @Override
-    public void insertRow() { return ; }
-
-    @Override
-    public java.sql.Statement getStatement() { return null; }
-
-    @Override
-    public boolean isFirst() { return true; }
 
     @Override
     public boolean isAfterLast() { return true; }
@@ -792,22 +606,16 @@ public class CachedRowSetImpl implements javax.sql.rowset.CachedRowSet {
     public void setFetchSize(int args0) { return ; }
 
     @Override
-    public void updateArray(int args0, java.sql.Array args1) { return ; }
-
-    @Override
     public void updateArray(java.lang.String args0, java.sql.Array args1) { return ; }
 
     @Override
-    public void updateAsciiStream(int args0, java.io.InputStream args1) { return ; }
-
-    @Override
-    public void updateAsciiStream(int args0, java.io.InputStream args1, int args2) { return ; }
+    public void updateArray(int args0, java.sql.Array args1) { return ; }
 
     @Override
     public void updateAsciiStream(java.lang.String args0, java.io.InputStream args1) { return ; }
 
     @Override
-    public void updateAsciiStream(java.lang.String args0, java.io.InputStream args1, long args2) { return ; }
+    public void updateAsciiStream(int args0, java.io.InputStream args1) { return ; }
 
     @Override
     public void updateAsciiStream(int args0, java.io.InputStream args1, long args2) { return ; }
@@ -816,13 +624,19 @@ public class CachedRowSetImpl implements javax.sql.rowset.CachedRowSet {
     public void updateAsciiStream(java.lang.String args0, java.io.InputStream args1, int args2) { return ; }
 
     @Override
-    public void updateBigDecimal(int args0, java.math.BigDecimal args1) { return ; }
+    public void updateAsciiStream(int args0, java.io.InputStream args1, int args2) { return ; }
+
+    @Override
+    public void updateAsciiStream(java.lang.String args0, java.io.InputStream args1, long args2) { return ; }
 
     @Override
     public void updateBigDecimal(java.lang.String args0, java.math.BigDecimal args1) { return ; }
 
     @Override
-    public void updateBinaryStream(java.lang.String args0, java.io.InputStream args1, long args2) { return ; }
+    public void updateBigDecimal(int args0, java.math.BigDecimal args1) { return ; }
+
+    @Override
+    public void updateBinaryStream(int args0, java.io.InputStream args1, long args2) { return ; }
 
     @Override
     public void updateBinaryStream(java.lang.String args0, java.io.InputStream args1) { return ; }
@@ -834,13 +648,13 @@ public class CachedRowSetImpl implements javax.sql.rowset.CachedRowSet {
     public void updateBinaryStream(int args0, java.io.InputStream args1) { return ; }
 
     @Override
-    public void updateBinaryStream(int args0, java.io.InputStream args1, long args2) { return ; }
-
-    @Override
     public void updateBinaryStream(java.lang.String args0, java.io.InputStream args1, int args2) { return ; }
 
     @Override
-    public void updateBlob(java.lang.String args0, java.io.InputStream args1) { return ; }
+    public void updateBinaryStream(java.lang.String args0, java.io.InputStream args1, long args2) { return ; }
+
+    @Override
+    public void updateBlob(int args0, java.io.InputStream args1, long args2) { return ; }
 
     @Override
     public void updateBlob(int args0, java.sql.Blob args1) { return ; }
@@ -852,16 +666,16 @@ public class CachedRowSetImpl implements javax.sql.rowset.CachedRowSet {
     public void updateBlob(java.lang.String args0, java.sql.Blob args1) { return ; }
 
     @Override
+    public void updateBlob(java.lang.String args0, java.io.InputStream args1) { return ; }
+
+    @Override
     public void updateBlob(int args0, java.io.InputStream args1) { return ; }
 
     @Override
-    public void updateBlob(int args0, java.io.InputStream args1, long args2) { return ; }
+    public void updateBoolean(java.lang.String args0, boolean args1) { return ; }
 
     @Override
     public void updateBoolean(int args0, boolean args1) { return ; }
-
-    @Override
-    public void updateBoolean(java.lang.String args0, boolean args1) { return ; }
 
     @Override
     public void updateByte(java.lang.String args0, byte args1) { return ; }
@@ -870,34 +684,22 @@ public class CachedRowSetImpl implements javax.sql.rowset.CachedRowSet {
     public void updateByte(int args0, byte args1) { return ; }
 
     @Override
-    public void updateCharacterStream(java.lang.String args0, java.io.Reader args1, long args2) { return ; }
+    public void updateCharacterStream(int args0, java.io.Reader args1, int args2) { return ; }
 
     @Override
     public void updateCharacterStream(java.lang.String args0, java.io.Reader args1, int args2) { return ; }
 
     @Override
-    public void updateCharacterStream(int args0, java.io.Reader args1, long args2) { return ; }
-
-    @Override
-    public void updateCharacterStream(int args0, java.io.Reader args1, int args2) { return ; }
-
-    @Override
     public void updateCharacterStream(int args0, java.io.Reader args1) { return ; }
+
+    @Override
+    public void updateCharacterStream(java.lang.String args0, java.io.Reader args1, long args2) { return ; }
 
     @Override
     public void updateCharacterStream(java.lang.String args0, java.io.Reader args1) { return ; }
 
     @Override
-    public void updateClob(java.lang.String args0, java.io.Reader args1, long args2) { return ; }
-
-    @Override
-    public void updateClob(int args0, java.io.Reader args1, long args2) { return ; }
-
-    @Override
-    public void updateClob(java.lang.String args0, java.io.Reader args1) { return ; }
-
-    @Override
-    public void updateClob(int args0, java.sql.Clob args1) { return ; }
+    public void updateCharacterStream(int args0, java.io.Reader args1, long args2) { return ; }
 
     @Override
     public void updateClob(java.lang.String args0, java.sql.Clob args1) { return ; }
@@ -906,10 +708,22 @@ public class CachedRowSetImpl implements javax.sql.rowset.CachedRowSet {
     public void updateClob(int args0, java.io.Reader args1) { return ; }
 
     @Override
-    public void updateDate(int args0, java.sql.Date args1) { return ; }
+    public void updateClob(java.lang.String args0, java.io.Reader args1) { return ; }
+
+    @Override
+    public void updateClob(int args0, java.io.Reader args1, long args2) { return ; }
+
+    @Override
+    public void updateClob(java.lang.String args0, java.io.Reader args1, long args2) { return ; }
+
+    @Override
+    public void updateClob(int args0, java.sql.Clob args1) { return ; }
 
     @Override
     public void updateDate(java.lang.String args0, java.sql.Date args1) { return ; }
+
+    @Override
+    public void updateDate(int args0, java.sql.Date args1) { return ; }
 
     @Override
     public void updateDouble(java.lang.String args0, double args1) { return ; }
@@ -930,13 +744,10 @@ public class CachedRowSetImpl implements javax.sql.rowset.CachedRowSet {
     public void updateInt(int args0, int args1) { return ; }
 
     @Override
-    public void updateLong(int args0, long args1) { return ; }
-
-    @Override
     public void updateLong(java.lang.String args0, long args1) { return ; }
 
     @Override
-    public void updateNCharacterStream(java.lang.String args0, java.io.Reader args1, long args2) { return ; }
+    public void updateLong(int args0, long args1) { return ; }
 
     @Override
     public void updateNCharacterStream(int args0, java.io.Reader args1) { return ; }
@@ -945,10 +756,22 @@ public class CachedRowSetImpl implements javax.sql.rowset.CachedRowSet {
     public void updateNCharacterStream(java.lang.String args0, java.io.Reader args1) { return ; }
 
     @Override
+    public void updateNCharacterStream(java.lang.String args0, java.io.Reader args1, long args2) { return ; }
+
+    @Override
     public void updateNCharacterStream(int args0, java.io.Reader args1, long args2) { return ; }
 
     @Override
+    public void updateNClob(java.lang.String args0, java.io.Reader args1, long args2) { return ; }
+
+    @Override
+    public void updateNClob(int args0, java.io.Reader args1, long args2) { return ; }
+
+    @Override
     public void updateNClob(int args0, java.io.Reader args1) { return ; }
+
+    @Override
+    public void updateNClob(java.lang.String args0, java.io.Reader args1) { return ; }
 
     @Override
     public void updateNClob(int args0, java.sql.NClob args1) { return ; }
@@ -957,37 +780,28 @@ public class CachedRowSetImpl implements javax.sql.rowset.CachedRowSet {
     public void updateNClob(java.lang.String args0, java.sql.NClob args1) { return ; }
 
     @Override
-    public void updateNClob(java.lang.String args0, java.io.Reader args1) { return ; }
-
-    @Override
-    public void updateNClob(int args0, java.io.Reader args1, long args2) { return ; }
-
-    @Override
-    public void updateNClob(java.lang.String args0, java.io.Reader args1, long args2) { return ; }
-
-    @Override
     public void updateNString(int args0, java.lang.String args1) { return ; }
 
     @Override
     public void updateNString(java.lang.String args0, java.lang.String args1) { return ; }
 
     @Override
+    public void updateNull(java.lang.String args0) { return ; }
+
+    @Override
     public void updateNull(int args0) { return ; }
 
     @Override
-    public void updateNull(java.lang.String args0) { return ; }
+    public void updateObject(int args0, java.lang.Object args1) { return ; }
 
     @Override
     public void updateObject(java.lang.String args0, java.lang.Object args1) { return ; }
 
     @Override
-    public void updateObject(int args0, java.lang.Object args1, int args2) { return ; }
-
-    @Override
     public void updateObject(java.lang.String args0, java.lang.Object args1, int args2) { return ; }
 
     @Override
-    public void updateObject(int args0, java.lang.Object args1) { return ; }
+    public void updateObject(int args0, java.lang.Object args1, int args2) { return ; }
 
     @Override
     public void updateRef(int args0, java.sql.Ref args1) { return ; }
@@ -1005,28 +819,22 @@ public class CachedRowSetImpl implements javax.sql.rowset.CachedRowSet {
     public void updateRowId(java.lang.String args0, java.sql.RowId args1) { return ; }
 
     @Override
-    public void updateSQLXML(java.lang.String args0, java.sql.SQLXML args1) { return ; }
-
-    @Override
     public void updateSQLXML(int args0, java.sql.SQLXML args1) { return ; }
 
     @Override
-    public void updateShort(int args0, short args1) { return ; }
+    public void updateSQLXML(java.lang.String args0, java.sql.SQLXML args1) { return ; }
 
     @Override
     public void updateShort(java.lang.String args0, short args1) { return ; }
+
+    @Override
+    public void updateShort(int args0, short args1) { return ; }
 
     @Override
     public void updateString(java.lang.String args0, java.lang.String args1) { return ; }
 
     @Override
     public void updateString(int args0, java.lang.String args1) { return ; }
-
-    @Override
-    public void updateTime(int args0, java.sql.Time args1) { return ; }
-
-    @Override
-    public void updateTime(java.lang.String args0, java.sql.Time args1) { return ; }
 
     @Override
     public void updateTimestamp(java.lang.String args0, java.sql.Timestamp args1) { return ; }
@@ -1038,10 +846,202 @@ public class CachedRowSetImpl implements javax.sql.rowset.CachedRowSet {
     public boolean wasNull() { return true; }
 
     @Override
-    public java.lang.Object unwrap(java.lang.Class args0) { return null; }
+    public java.sql.Statement getStatement() { return null; }
+
+    @Override
+    public void updateBytes(int args0, byte[] args1) { return ; }
+
+    @Override
+    public void updateBytes(java.lang.String args0, byte[] args1) { return ; }
+
+    @Override
+    public java.lang.Object getObject(java.lang.String args0) { return null; }
+
+    @Override
+    public java.lang.Object getObject(int args0, java.util.Map args1) { return null; }
+
+    @Override
+    public java.lang.Object getObject(java.lang.String args0, java.util.Map args1) { return null; }
+
+    @Override
+    public java.lang.Object getObject(int args0) { return null; }
+
+    @Override
+    public java.lang.Object getObject(java.lang.String args0, java.lang.Class args1) { return null; }
+
+    @Override
+    public java.lang.Object getObject(int args0, java.lang.Class args1) { return null; }
+
+    @Override
+    public boolean getBoolean(java.lang.String args0) { return true; }
+
+    @Override
+    public boolean getBoolean(int args0) { return true; }
+
+    @Override
+    public byte getByte(java.lang.String args0) { return 0; }
+
+    @Override
+    public byte getByte(int args0) { return 0; }
+
+    @Override
+    public short getShort(java.lang.String args0) { return 0; }
+
+    @Override
+    public short getShort(int args0) { return 0; }
+
+    @Override
+    public int getInt(java.lang.String args0) { return 0; }
+
+    @Override
+    public int getInt(int args0) { return 0; }
+
+    @Override
+    public long getLong(int args0) { return 0; }
+
+    @Override
+    public long getLong(java.lang.String args0) { return 0; }
+
+    @Override
+    public float getFloat(java.lang.String args0) { return 0; }
+
+    @Override
+    public float getFloat(int args0) { return 0; }
+
+    @Override
+    public double getDouble(java.lang.String args0) { return 0; }
+
+    @Override
+    public double getDouble(int args0) { return 0; }
+
+    @Override
+    public byte[] getBytes(int args0) { return null; }
+
+    @Override
+    public byte[] getBytes(java.lang.String args0) { return null; }
+
+    @Override
+    public boolean next() { return true; }
+
+    @Override
+    public java.sql.Array getArray(int args0) { return null; }
+
+    @Override
+    public java.sql.Array getArray(java.lang.String args0) { return null; }
+
+    @Override
+    public java.net.URL getURL(int args0) { return null; }
+
+    @Override
+    public java.net.URL getURL(java.lang.String args0) { return null; }
+
+    @Override
+    public boolean first() { return true; }
+
+    @Override
+    public void close() { return ; }
+
+    @Override
+    public int getType() { return 0; }
+
+    @Override
+    public java.lang.String getString(java.lang.String args0) { return null; }
+
+    @Override
+    public java.lang.String getString(int args0) { return null; }
+
+    @Override
+    public boolean last() { return true; }
+
+    @Override
+    public boolean previous() { return true; }
+
+    @Override
+    public boolean isClosed() { return true; }
+
+    @Override
+    public java.sql.Date getDate(int args0, java.util.Calendar args1) { return null; }
+
+    @Override
+    public java.sql.Date getDate(java.lang.String args0, java.util.Calendar args1) { return null; }
+
+    @Override
+    public java.sql.Date getDate(int args0) { return null; }
+
+    @Override
+    public java.sql.Date getDate(java.lang.String args0) { return null; }
+
+    @Override
+    public java.sql.Ref getRef(java.lang.String args0) { return null; }
+
+    @Override
+    public java.sql.Ref getRef(int args0) { return null; }
+
+    @Override
+    public java.sql.Timestamp getTimestamp(java.lang.String args0) { return null; }
+
+    @Override
+    public java.sql.Timestamp getTimestamp(int args0) { return null; }
+
+    @Override
+    public java.sql.Timestamp getTimestamp(int args0, java.util.Calendar args1) { return null; }
+
+    @Override
+    public java.sql.Timestamp getTimestamp(java.lang.String args0, java.util.Calendar args1) { return null; }
+
+    @Override
+    public java.math.BigDecimal getBigDecimal(java.lang.String args0, int args1) { return null; }
+
+    @Override
+    public java.math.BigDecimal getBigDecimal(int args0, int args1) { return null; }
+
+    @Override
+    public java.math.BigDecimal getBigDecimal(java.lang.String args0) { return null; }
+
+    @Override
+    public java.math.BigDecimal getBigDecimal(int args0) { return null; }
+
+    @Override
+    public java.sql.Time getTime(int args0, java.util.Calendar args1) { return null; }
+
+    @Override
+    public java.sql.Time getTime(java.lang.String args0, java.util.Calendar args1) { return null; }
+
+    @Override
+    public java.sql.Time getTime(int args0) { return null; }
+
+    @Override
+    public java.sql.Time getTime(java.lang.String args0) { return null; }
+
+    @Override
+    public void updateTime(java.lang.String args0, java.sql.Time args1) { return ; }
+
+    @Override
+    public void updateTime(int args0, java.sql.Time args1) { return ; }
+
+    @Override
+    public int getRow() { return 0; }
+
+    @Override
+    public int findColumn(java.lang.String args0) { return 0; }
+
+    @Override
+    public void insertRow() { return ; }
+
+    @Override
+    public java.io.Reader getCharacterStream(java.lang.String args0) { return null; }
+
+    @Override
+    public java.io.Reader getCharacterStream(int args0) { return null; }
+
+    @Override
+    public boolean isFirst() { return true; }
 
     @Override
     public boolean isWrapperFor(java.lang.Class args0) { return true; }
+
+    @Override
+    public java.lang.Object unwrap(java.lang.Class args0) { return null; }
 
     @Override
     public int[] getMatchColumnIndexes() { return null; }

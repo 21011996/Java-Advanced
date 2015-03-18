@@ -3,30 +3,6 @@ package org.omg.DynamicAny;
 public class DynAnyImpl implements org.omg.DynamicAny.DynAny {
 
     @Override
-    public org.omg.CORBA.TypeCode type() { return null; }
-
-    @Override
-    public boolean next() { return true; }
-
-    @Override
-    public void destroy() { return ; }
-
-    @Override
-    public org.omg.DynamicAny.DynAny copy() { return null; }
-
-    @Override
-    public void rewind() { return ; }
-
-    @Override
-    public boolean equal(org.omg.DynamicAny.DynAny args0) { return true; }
-
-    @Override
-    public boolean seek(int args0) { return true; }
-
-    @Override
-    public void assign(org.omg.DynamicAny.DynAny args0) { return ; }
-
-    @Override
     public int component_count() { return 0; }
 
     @Override
@@ -151,6 +127,30 @@ public class DynAnyImpl implements org.omg.DynamicAny.DynAny {
 
     @Override
     public org.omg.CORBA.Any to_any() { return null; }
+
+    @Override
+    public org.omg.CORBA.TypeCode type() { return null; }
+
+    @Override
+    public boolean next() { return true; }
+
+    @Override
+    public void destroy() { return ; }
+
+    @Override
+    public org.omg.DynamicAny.DynAny copy() { return null; }
+
+    @Override
+    public void rewind() { return ; }
+
+    @Override
+    public void assign(org.omg.DynamicAny.DynAny args0) { return ; }
+
+    @Override
+    public boolean seek(int args0) { return true; }
+
+    @Override
+    public boolean equal(org.omg.DynamicAny.DynAny args0) { return true; }
 
     @Override
     public org.omg.CORBA.Request _create_request(org.omg.CORBA.Context args0, java.lang.String args1, org.omg.CORBA.NVList args2, org.omg.CORBA.NamedValue args3, org.omg.CORBA.ExceptionList args4, org.omg.CORBA.ContextList args5) { return null; }
