@@ -46,6 +46,7 @@ public class Implementor implements JarImpler {
     /**
      * Empty constructor.
      */
+    private static Class<?> impl;
     public Implementor() {
         sb = new StringBuilder();
         allMethods = new ArrayList<>();
@@ -83,6 +84,7 @@ public class Implementor implements JarImpler {
      */
     public void implement(Class<?> token, File root) throws ImplerException {
         int modifiers = token.getModifiers();
+        impl = token;
         if ((token.isPrimitive())) {
             throw new ImplerException();
         }
@@ -119,7 +121,7 @@ public class Implementor implements JarImpler {
                 }
             }
         }
-        directory.delete();
+        //directory.delete();
     }
 
     /**
@@ -164,6 +166,7 @@ public class Implementor implements JarImpler {
             Manifest manifest = new Manifest();
             manifest.getMainAttributes().put(Attributes.Name.MANIFEST_VERSION,
                     "1.0");
+            manifest.getMainAttributes().put(Attributes.Name.MAIN_CLASS, impl.getPackage().getName() + "." + impl.getSimpleName() + "Impl");
             try (FileOutputStream fout = new FileOutputStream(root);
                  JarOutputStream jarOut = new JarOutputStream(fout, manifest)) {
                 jarOut.putNextEntry(new ZipEntry(classFullName.replaceAll(

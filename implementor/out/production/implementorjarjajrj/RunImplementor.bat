@@ -1,0 +1,1 @@
+C:\jdk\jdk1.8.0_31\bin\java.exe -jar Implementor.jar -jar ru.ifmo.ctddev.kachalskiy.implementor.Mama Mama.jar
