@@ -1,6 +1,7 @@
 package ru.ifmo.ctddev.kachalskiy.iterativeparallelism;
 
 import info.kgeorgiy.java.advanced.concurrent.ScalarIP;
+import info.kgeorgiy.java.advanced.mapper.ParallelMapper;
 
 import java.util.*;
 import java.util.function.Function;
@@ -21,13 +22,28 @@ import java.util.stream.Collectors;
 public class IterativeParallelism implements ScalarIP {
 
     /**
-     * The dummy <tt>static</tt> method which creates instance of
-     * {@link IterativeParallelism}
-     * and invokes  method on it.
-     *
-     * @param args ignored command line arguments
-     * @throws InterruptedException if any worker thread is interrupted during its work
+     * Instance of {@code thread pool}
      */
+    private ParallelMapper mapper;
+
+    /**
+     * Create a simple instance of {@code IterativeParallelism} that creates
+     * and manages worker threads itself
+     */
+    public IterativeParallelism() {
+    }
+
+    /**
+     * Create an instance of {@code IterativeParallelism} that uses specified
+     * {@code ParallelMapper} as a {@code thread pool} for intrinsic purposes.
+     * All the work is performing in parallel through it.
+     *
+     * @param mapper given {@code thread pool}
+     */
+    public IterativeParallelism(ParallelMapper mapper) {
+        this.mapper = mapper;
+    }
+
     public static void main(String[] args) throws InterruptedException {
     }
 
@@ -63,21 +79,28 @@ public class IterativeParallelism implements ScalarIP {
 
     /**
      * Instances of this class perform all heavy operations in their main
-     * {@link #run()} method and saves result in <tt>result</tt>
-
-     * @param <T> <tt>generic</tt> type of result
+     * {@link #run()} method and saves result in {@code result}
+     * @param <R> {@code generic} type of result
      */
-    private abstract static class PartWorker<T> implements Runnable {
-        private T result;
+    private static class PartWorker<T, R> implements Runnable {
 
-        public T getResult() {
+        private List<? extends T> part;
+        private Function<List<? extends T>, R> action;
+        private R result;
+
+        private PartWorker(List<? extends T> part, Function<List<? extends T>, R> action) {
+            this.part = part;
+            this.action = action;
+        }
+
+        public R getResult() {
             return result;
         }
 
-        public void setResult(T newResult) {
-            result = newResult;
+        @Override
+        public void run() {
+            result = action.apply(part);
         }
-
     }
 
     /**
@@ -103,24 +126,24 @@ public class IterativeParallelism implements ScalarIP {
                                      Function<List<? extends T>, R> action,
                                      Function<List<R>, R> combiner) throws InterruptedException {
         List<List<? extends T>> parts = divideIntoParts(threads, list);
-        List<Thread> rooms = new ArrayList<>();
-        List<PartWorker<R>> workers = new ArrayList<>();
-        for (List<? extends T> part : parts) {
-            PartWorker<R> worker = new PartWorker<R>() {
-                @Override
-                public void run() {
-                    setResult(action.apply(part));
-                }
-            };
-            workers.add(worker);
-            Thread room = new Thread(worker);
-            rooms.add(room);
-            room.start();
+        if (mapper != null) {
+            List<R> results = mapper.map(action, parts);
+            return combiner.apply(results);
+        } else {
+            List<Thread> rooms = new ArrayList<>();
+            List<PartWorker<T, R>> workers = new ArrayList<>();
+            for (List<? extends T> part : parts) {
+                PartWorker<T, R> worker = new PartWorker<T, R>(part, action);
+                workers.add(worker);
+                Thread room = new Thread(worker);
+                rooms.add(room);
+                room.start();
+            }
+            for (Thread room : rooms) {
+                room.join();
+            }
+            return combiner.apply(workers.stream().map(PartWorker::getResult).collect(Collectors.toList()));
         }
-        for (Thread room : rooms) {
-            room.join();
-        }
-        return combiner.apply(workers.stream().map(PartWorker::getResult).collect(Collectors.toList()));
     }
 
     /**
