@@ -60,6 +60,7 @@ public class HelloUDPClient implements HelloClient {
                         }
                     } catch (SocketException e) {
                     }
+                    System.out.println("Client "+threadId+" ushel");
                 });
             }
 

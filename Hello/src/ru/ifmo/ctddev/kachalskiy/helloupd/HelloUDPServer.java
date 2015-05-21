@@ -59,6 +59,7 @@ public class HelloUDPServer implements HelloServer {
 							String received = new String(receivingPacket
 									.getData(), 0, receivingPacket.getLength());
 							String sending = "Hello, " + received;
+							System.out.println(received);
 							sendingSocket.send(new DatagramPacket(sending
 									.getBytes(), sending.getBytes().length,
 									receivingPacket.getAddress(),

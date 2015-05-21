@@ -30,22 +30,36 @@ public class UIFileCopy extends JPanel implements ActionListener, PropertyChange
     private Task task;
     private File from;
     private File to;
+    int progress;
+    long speed;
+    long size;
+    long avspeed;
+    long started;
+    long remaining;
+    long readed;
+    int write;
     private boolean stop = false;
 
     class Task extends SwingWorker<Void, Void> {
         @Override
         public Void doInBackground() {
-            long size = folderGetSize(from);
+            size = folderGetSize(from);
             setProgress(0);
-            int progress = 0;
-            long speed = 0;
-            long avspeed = 0;
-            long started = System.currentTimeMillis();
-            long remaining = 0;
-            long readed = 0;
-            int write = 0;
+            progress = 0;
+            speed = 0;
+            avspeed = 0;
+            started = System.currentTimeMillis();
+            remaining = 0;
+            readed = 0;
+            write = 0;
 
+            copyDir(from,to);
+            return null;
+        }
 
+        public void copyDir(File from, File to){
+            createDir(to);
+            System.out.println(to.toString());
             for (File file : from.listFiles()) {
                 if (file.isFile()) {
                     InputStream is = null;
@@ -60,7 +74,7 @@ public class UIFileCopy extends JPanel implements ActionListener, PropertyChange
                         int length;
                         while ((length = is.read(buffer)) > 0) {
                             if (stop) {
-                                return null;
+                                System.exit(0);
                             }
                             os.write(buffer, 0, length);
                             readed += length;
@@ -96,9 +110,17 @@ public class UIFileCopy extends JPanel implements ActionListener, PropertyChange
                         os.close();
                     } catch (IOException e) {
                     }
+                } else {
+
+                    copyDir(file,new File(to.getPath()+'/'+file.getName()));
                 }
             }
-            return null;
+        }
+
+        public void createDir(File to){
+            if (!to.exists()){
+                to.mkdirs();
+            }
         }
 
         @Override
@@ -202,7 +224,7 @@ public class UIFileCopy extends JPanel implements ActionListener, PropertyChange
         newContentPane.setBorder(emptyBorder);
         frame.setContentPane(newContentPane);
         //frame.setPreferredSize(new Dimension(600,   350));
-        //frame.setMinimumSize(new Dimension(200,  275));
+        frame.setMinimumSize(new Dimension(200,  275));
         frame.pack();
         frame.setVisible(true);
     }
@@ -229,7 +251,7 @@ public class UIFileCopy extends JPanel implements ActionListener, PropertyChange
             if (file.isFile()) {
                 length += file.length();
             } else {
-                //length += folderGetSize(file);
+                length += folderGetSize(file);
             }
         }
         return length;
