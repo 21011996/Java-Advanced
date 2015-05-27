@@ -1,5 +1,6 @@
 #!/bin/bash
-export CLASSPATH=../..
+export CLASSPATH=../../../../..
 
+rm -f *.class
 javac Server.java Client.java
-rmic -d $CLASSPATH examples.rmi.AccountImpl examples.rmi.BankImpl
+rmic -d $CLASSPATH ru.ifmo.ctddev.belyy.Bank.AccountImpl ru.ifmo.ctddev.belyy.Bank.RemotePerson ru.ifmo.ctddev.belyy.Bank.BankImpl

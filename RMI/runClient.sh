@@ -1,4 +1,4 @@
 #!/bin/bash
-export CLASSPATH=../..
+export CLASSPATH=../../../../..
 
-java examples.rmi.Client
+java ru.ifmo.ctddev.belyy.Bank.Client $1 $2 $3 $4 $5 $6

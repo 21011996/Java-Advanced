@@ -1,5 +1,5 @@
 #!/bin/bash
-export CLASSPATH=../..
+export CLASSPATH=../../../../..
 
 rmiregistry &
-java examples.rmi.Server
+java ru.ifmo.ctddev.belyy.Bank.Server

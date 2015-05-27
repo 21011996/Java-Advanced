@@ -1,4 +1,4 @@
-package examples.rmi;
+package ru.ifmo.ctddev.belyy.Bank;
 
 import java.rmi.*;
 import java.rmi.server.*;

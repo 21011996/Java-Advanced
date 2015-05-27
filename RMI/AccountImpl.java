@@ -1,26 +1,29 @@
-package examples.rmi;
+package ru.ifmo.ctddev.belyy.Bank;
 
-import java.rmi.*;
+import java.math.BigDecimal;
 
 public class AccountImpl implements Account {
     private final String id;
-    private int amount;
+    private BigDecimal amount;
 
     public AccountImpl(String id) {
         this.id = id;
-        amount = 0;
+        this.amount = new BigDecimal(0);
     }
 
-    public String getId() {
-        return id;
+    public AccountImpl(AccountImpl other) {
+        this.id = other.id;
+        this.amount = other.amount;
     }
 
-    public int getAmount() {
+    public BigDecimal getAmount() {
         return amount;
     }
 
-    public void setAmount(int amount) {
-        System.out.println("Setting amount of money for account " + id);
-        this.amount = amount;
+    public void incAmount(BigDecimal deltaAmount) {
+        synchronized (this) {
+            System.out.println("Increasing amount of money for account " + id);
+            amount = amount.add(deltaAmount);
+        }
     }
 }
