@@ -33,7 +33,7 @@ import java.util.concurrent.TimeUnit;
 public class HelloUDPServer implements HelloServer {
 	private ExecutorService service;
 	private DatagramSocket receivingSocket;
-	
+
 	/**
      * Method to start server with the given parameters
      *
@@ -59,7 +59,9 @@ public class HelloUDPServer implements HelloServer {
 							String received = new String(receivingPacket
 									.getData(), 0, receivingPacket.getLength());
 							String sending = "Hello, " + received;
-							System.out.println(received);
+                            byte[] arr = sending.getBytes("UTF-8");
+                            sending = new String(arr);
+							//System.out.println(sending);
 							sendingSocket.send(new DatagramPacket(sending
 									.getBytes(), sending.getBytes().length,
 									receivingPacket.getAddress(),

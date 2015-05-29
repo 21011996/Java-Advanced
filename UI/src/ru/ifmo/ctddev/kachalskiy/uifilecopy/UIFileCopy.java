@@ -53,11 +53,11 @@ public class UIFileCopy extends JPanel implements ActionListener, PropertyChange
             readed = 0;
             write = 0;
 
-            copyDir(from,to);
+            copyDir(from, to);
             return null;
         }
 
-        public void copyDir(File from, File to){
+        public void copyDir(File from, File to) {
             createDir(to);
             System.out.println(to.toString());
             for (File file : from.listFiles()) {
@@ -80,9 +80,9 @@ public class UIFileCopy extends JPanel implements ActionListener, PropertyChange
                             readed += length;
                             readed2 += length;
 
-                            if (System.currentTimeMillis() - shutter > 10) {
+                            if (System.currentTimeMillis() - shutter > 100) {
                                 speed = (readed2) / (System.currentTimeMillis() - shutter + 1);
-                                write = (int) (speed * 0.00122);
+                                write = (int) (speed * 0.00095);
                                 nowSpeed.setText("" + String.format("%02d", write) + " MB/second");
 
                                 remaining = (size - readed) / avspeed;
@@ -97,7 +97,7 @@ public class UIFileCopy extends JPanel implements ActionListener, PropertyChange
                             elapsedTime.setText("" + write + " seconds");
 
                             avspeed = readed / (System.currentTimeMillis() - started + 1);
-                            write = (int) (avspeed * 0.00122);
+                            write = (int) (avspeed * 0.00095);
                             averageSpeed.setText("" + String.format("%02d", write) + " MB/second");
 
 
@@ -112,14 +112,18 @@ public class UIFileCopy extends JPanel implements ActionListener, PropertyChange
                     }
                 } else {
 
-                    copyDir(file,new File(to.getPath()+'/'+file.getName()));
+                    copyDir(file, new File(to.getPath() + '/' + file.getName()));
                 }
             }
         }
 
-        public void createDir(File to){
-            if (!to.exists()){
-                to.mkdirs();
+        public void createDir(File to) {
+            if (!to.exists()) {
+                try {
+                    to.mkdirs();
+                } catch (Exception e) {
+                    progressBar.setString("Couldn't create directory");
+                }
             }
         }
 
@@ -224,7 +228,7 @@ public class UIFileCopy extends JPanel implements ActionListener, PropertyChange
         newContentPane.setBorder(emptyBorder);
         frame.setContentPane(newContentPane);
         //frame.setPreferredSize(new Dimension(600,   350));
-        frame.setMinimumSize(new Dimension(200,  275));
+        frame.setMinimumSize(new Dimension(200, 275));
         frame.pack();
         frame.setVisible(true);
     }
